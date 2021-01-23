@@ -230,6 +230,11 @@ export default {
         top: Math.round(centerY - y)
       }
     }
+  },
+  watch: {
+    persistent(n) {
+      if (!n) this.visible = false
+    }
   }
 }
 </script>
